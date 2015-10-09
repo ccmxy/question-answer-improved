@@ -1,0 +1,14 @@
+{{#if addAnswer}}
+  <h4>Please share</h4>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="answer">Your answer: </label>
+          {{input value=answer id="answer"}}
+        </div>
+        <button {{action 'save1'}}>Save</button>
+      </form>
+    </div>
+{{else}}
+    <button {{action 'answerFormShow' class="btn btn-default btn-lg" }}>Add answer<span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+{{/if}}
