@@ -8,6 +8,7 @@ export default Ember.Component.extend({
     },
 
     save1() {
+      debugger;
       var params = {
         question: this.get('question'),
         theAnswer: this.get('answer'),

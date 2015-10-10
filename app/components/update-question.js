@@ -8,6 +8,7 @@ export default Ember.Component.extend({
     },
 
     update(question) {
+      debugger;
       var params = {
         inquiry: this.get('inquiry')? this.get('inquiry') : question.inquiry.value,
         notes: this.get('notes')? this.get('notes') : question.notes.value,

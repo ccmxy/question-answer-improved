@@ -3,13 +3,15 @@
 <h4><span class="muted">-{{model.author}}</span></h4>
 
 
-<h2>{{update-question question=model save2="save"}}</h2>
+<h2>{{update-question question=model}}</h2>
 
 <h2>{{add-answer question=model save2="save"}}</h2>
 <i><h4>Answers so far</h4></i>
 <hr>
 <ul class="list-group">
   {{#each model.answers as |answer|}}
-      <li class="list-group-item">{{answer-tile answer=answer}}</li><hr>
+      <li class="list-group-item">
+        {{answer-tile answer=answer upvoteAnswer="upvoteAnswer"}}
+      </li><hr>
   {{/each}}
 </ul>
