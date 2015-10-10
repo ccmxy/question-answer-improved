@@ -20,12 +20,18 @@ export default Ember.Component.extend({
         answer.save();
     },
     downvoteAnswer(answer) {
+      var theScore = answer.get('score');
+      theScore--;
       var params = {
-        answer: this.get('answer'),
-      //  theAnswer: this.get('theAnswer'),
+        score: theScore,
       };
-
-      debugger;
+      //Set the params to score:
+      Object.keys(params).forEach(function(key) {
+          if(params[key]!==undefined) {
+            answer.set(key,params[key]);
+          }
+        });
+      answer.save();
     }
   }
 });
